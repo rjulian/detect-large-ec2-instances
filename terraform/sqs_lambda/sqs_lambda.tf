@@ -4,7 +4,7 @@ module "sqs_lambda" {
   cloudwatch_event_rule_id  = var.cloudwatch_event_rule_id
   cloudwatch_event_rule_arn = var.cloudwatch_event_rule_arn
   function_name   = "DetectLargeEc2Instances"
-  source_code_dir = "${path.module}/source"
+  source_code_dir = "${path.module}/../../source"
   handler         = "detect_large_ec2_instances.lambda_handler"
   lambda_runtime  = "python3.7"
   environment_variable_map = {
